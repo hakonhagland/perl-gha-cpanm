@@ -1,0 +1,11 @@
+name: linux-cpanm-test
+on: [push, pull_request]
+jobs:
+  build-dist:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: install cpanm
+        run: cpan App::cpanminus
+      - name: test cpanm
+        run: cpanm -v Path::Tiny
