@@ -8,7 +8,6 @@ jobs:
       - name: perl info
         run: |
           perl --version
-          cpan -v
       - name: install cpanm
         run: cpan App::cpanminus
       - name: test cpanm
